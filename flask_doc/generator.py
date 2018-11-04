@@ -380,9 +380,9 @@ def main():
         app = getattr(mod, var_name)
         g = Generator(app, filters=filter_arr)
         g.prepare()
-        print g.generate_markdown()
+        print(g.generate_markdown())
         sys.exit(0)
     except Exception as e:
         traceback.print_exc()
-        print "Can not import Flask app from argument", import_str
+        print("Can not import Flask app from argument", import_str)
         sys.exit(1)
